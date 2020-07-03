@@ -6,8 +6,7 @@
 # include <omp.h>
 
 
-double cpu_time ( );
-void timestamp ( );
+
 
 int main ( int argc, char *argv[] )
 {
@@ -42,48 +41,7 @@ double segundos=0;
 tiempo_inicio = omp_get_wtime ( );
 /******************************************************************************/
 
-  int n = 1000000;
-  int v=1;
-  int primes;
-  double t;
-  double u =0;
-  
-  
-  printf ( "\n" );
- 
-  printf ( "  Tabla de NUMEROS PRIMOS del  1 al N.\n" );
-  printf ( "\n" );
-  printf ( "         N        Pi          Tiempo\n" );
-  printf ( "\n" );
-  //create the table of prime numbers
-  while( v <= n )
-  {
-  	t= omp_get_wtime ( );
-  	
-  	primes = prime_number ( v );
 
-    	t = ( omp_get_wtime ( )- t);
-	
-   	printf ( "  %8d  %8d  %14f\n", v, primes, t );
-   	
-   	u=u+t;
-
-  	v = v * 2;
-  }
-    
-
-  
-  
-  tiempo_final = clock();
-
-  segundos = (double)(tiempo_final - tiempo_inicio) / CLOCKS_PER_SEC; /*i'm catching the time of run*/
-    
-  printf("%f segundos de ejecucion \n",segundos);
-  printf("%f segundos de ejecucion \n",t);
-
-  
-return;
-}
 
 
 
@@ -216,4 +174,50 @@ return;
 # undef TIME_SIZE
 }
 
+
+/******************************************************************************/
+
+
+  int n = 1000000;
+  int v=1;
+  int primes;
+  double t;
+  double u =0;
+  
+  
+  printf ( "\n" );
+ 
+  printf ( "  Tabla de NUMEROS PRIMOS del  1 al N.\n" );
+  printf ( "\n" );
+  printf ( "         N        Pi          Tiempo\n" );
+  printf ( "\n" );
+  //create the table of prime numbers
+  while( v <= n )
+  {
+  	t= omp_get_wtime ( );
+  	
+  	primes = prime_number ( v );
+
+    	t = ( omp_get_wtime ( )- t);
+	
+   	printf ( "  %8d  %8d  %14f\n", v, primes, t );
+   	
+   	u=u+t;
+
+  	v = v * 2;
+  }
+    
+
+  
+  
+  tiempo_final = omp_get_wtime ( );
+
+  segundos = (tiempo_final - tiempo_inicio);
+   /*i'm catching the time of run*/
+    
+  printf("%f segundos de ejecucion \n",segundos);
+  timestamp();
+  
+return;
+}
 
