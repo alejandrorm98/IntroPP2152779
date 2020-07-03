@@ -2,8 +2,8 @@
 
 #SBATCH --partition=normal  # Nombre de la particion - Los nombres se obtienen con el comando sinfo
 #SBATCH --job-name=AlejoR4M1   # Nombre de la tarea a ejecutar - puede ser cualquiera
-#SBATCH --nodes=1           # Cantidad de nodos a usar
-#SBATCH --ntasks=1          # Numero de tareas a ejecutar
+#SBATCH --nodes=2           # Cantidad de nodos a usar
+#SBATCH --ntasks=2          # Numero de tareas a ejecutar
 #SBATCH --cpus-per-task=16  # Numero de cores asignados a cada tarea
 #SBATCH --ntasks-per-node=1 # Numero total de tareas a ejecutar por nodo
 #SBATCH --output=OpenMP.out>>prime.txt # Archivo de salida donde se encuentran los resultados de la ejecucion
