@@ -11,8 +11,7 @@ internamente va comparando desde 2 a N respectivamente cada valor factorial de N
 es una tabla con una secuencia de numeros hasta N dando el número de primos que alberga detrás de él y el tiempo que tardó en carcar cada uno para medir su 
 rendimiento.
 
-Lo primero que hice fue analizar el código, mirar cuales eran sus posibles puntos críticos a la hora de correr en serial con muchos datos, despues al analizar 
-un for anidado secuencial decidí ahí utilizar la libreria openMP para mejorar su rendimiento dividiendo su trabajo.
+Lo primero que hice fue analizar el código, mirar cuales eran sus posibles puntos críticos a la hora de correr en serial con muchos datos, despues a diferencia de Openmp, me tocó analizar dentro del main donde podía implementar MPI y 
 
 ### * GUANE
 
