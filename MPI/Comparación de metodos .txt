@@ -1,0 +1,14 @@
+
+EJECUCION EN SERIAL
+58.540000 segundos de ejecucion 
+05 August 2020 08:50:28 PM
+
+  EJECUCION EN OMP
+8.353483 segundos de ejecucion 
+05 August 2020 08:59:58 PM
+
+Ejecucion MPI_Prime:
+42.752606 segundos de ejecucion 
+05 August 2020 10:20:32 PM.
+
+HAciendo un recuento y comparando por el tiempo de ejecucion de cada Metodo utilizado, en la extranccion de numeros primos el mejor resultado fue de OMP seguido de MPI y no por mucho más arriba que la ejecución en serial. 
